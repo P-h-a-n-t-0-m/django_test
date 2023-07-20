@@ -1,0 +1,9 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<form enctype="multipart/form-data" method="POST">
+    {% csrf_token %}
+    <h3>You img: <img src="{{ object.image_to.url }}" alt="" width="30%" height="30%"></h3>
+    <h3>You username: {{ object.user.username }}</h3>
+    <h3>You email: {{ object.user.email }}</h3>
+</form>
+{% endblock content %}
